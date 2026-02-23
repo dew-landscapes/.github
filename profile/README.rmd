@@ -73,11 +73,11 @@ The project [`envOcc`](https://github.com/dew-landscapes/envOcc) helps aggregate
 
 # Supporting packages
 
-## envFunc
+## [`envFunc`](https://github.com/dew-landscapes/envFunc)
 
 `r utils::packageDescription("envFunc")$Description`
 
-## envTargets
+## [`envTargets`](https://github.com/dew-landscapes/envTargets)
 
 `r utils::packageDescription("envTargets")$Description`
 

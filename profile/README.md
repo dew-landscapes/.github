@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-08:59.
+09:01.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -77,11 +77,11 @@ accessible data sources are available within
 
 # Supporting packages
 
-## envFunc
+## [`envFunc`](https://github.com/dew-landscapes/envFunc)
 
 Generic tools useful across `envBlah` packages.
 
-## envTargets
+## [`envTargets`](https://github.com/dew-landscapes/envTargets)
 
 The goal of envTargets is to help automate the creation, execuation, and
 maintenance of targets workflows in other ‘env’ projects.
