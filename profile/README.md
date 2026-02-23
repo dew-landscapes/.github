@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-08:26.
+08:40.
 
 DEW-landscapes holds packages and workflows (projects) we have found
 useful for creating, cleaning and analysing large, unstructured
@@ -62,7 +62,8 @@ graph LR
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>workflow"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
-    
+    x6832f874a98057bb(["envFunc<br>package"]):::queued
+    xb03046fba8fa1b84(["envTargets<br>package"]):::queued
   end
 ```
 
@@ -74,6 +75,8 @@ accessible data sources are available within
 [`envImport`](https://github.com/dew-landscapes/envImport).
 
 # envClean and envCleaned
+
+# References
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
