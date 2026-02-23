@@ -1,13 +1,6 @@
 DEW-landscapes
 ================
-truetruetruetrue
-Tuesday, 24 February, 2026. 07:27
-
-    ## [1] "sits"    "targets"
-
-This readme is a work in progress. Last update: NA
-
-# DEW-landscapes
+Tuesday, 24 February, 2026. 07:52
 
 DEW-landscapes holds packages and workflows (projects) we have found
 useful for creating, cleaning and analysing large, unstructured
@@ -18,7 +11,7 @@ Primarily, this readme aims to document the various `env` packages and
 workflows (projects), when you might want to use them, and how they hang
 together.
 
-## Background
+# Background
 
 DEW-landscapes projects and packages have been roughly guided by the
 paper *Essential biodiversity variables for mapping and monitoring
@@ -34,7 +27,7 @@ workflows, also provides useful background on [regular
 cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes)
 within the context of earth observation (EO) cubes.
 
-### Workflows
+## Workflows
 
 The following figure shows a cartoon of the various workflows and the
 context in which they might be used.
@@ -44,30 +37,28 @@ graph LR
   style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
-    x2db1ec7a48f65a9b(["Outdated"]):::outdated
+    xa3883d8216f2b511(["Queued"]):::queued
     xd03d7c7dd2ddda2b(["Regular target"]):::none
   end
   subgraph Graph
     direction LR
-    x199e33ac94c360fd(["envClean"]):::outdated --> x4e1f08a5bd05b882(["envCleaned"]):::outdated
-    x4f41d9ef8b70ed0e(["envRange"]):::outdated --> x4e1f08a5bd05b882(["envCleaned"]):::outdated
-    x9d3addc2d3c28cb0(["envOcc"]):::outdated --> x4e1f08a5bd05b882(["envCleaned"]):::outdated
-    x67b5feaf09e4d0ca(["envRas"]):::outdated --> x4e1f08a5bd05b882(["envCleaned"]):::outdated
-    xa419b1871c902a02(["envImport"]):::outdated --> x9d3addc2d3c28cb0(["envOcc"]):::outdated
-    x5499a04bf3778295(["envRegCont"]):::outdated --> x2cb0f2dc918c8a98(["envPIA"]):::outdated
-    xc1054dd4c63b18e0(["envSDMs"]):::outdated --> x2cb0f2dc918c8a98(["envPIA"]):::outdated
-    x4e1f08a5bd05b882(["envCleaned"]):::outdated --> x5499a04bf3778295(["envRegCont"]):::outdated
-    x4f41d9ef8b70ed0e(["envRange"]):::outdated --> x5499a04bf3778295(["envRegCont"]):::outdated
-    x07cddf360e9b199e(["envSDM"]):::outdated --> xc1054dd4c63b18e0(["envSDMs"]):::outdated
-    x67b5feaf09e4d0ca(["envRas"]):::outdated --> xc1054dd4c63b18e0(["envSDMs"]):::outdated
-    x4e1f08a5bd05b882(["envCleaned"]):::outdated --> xc1054dd4c63b18e0(["envSDMs"]):::outdated
+    x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued
+    x9d3addc2d3c28cb0(["envOcc<br>workflow"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>workflow"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued
+    xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>workflow"]):::queued
+    x5499a04bf3778295(["envRegCont<br>workflow"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>workflow"]):::queued
+    xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>workflow"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued --> x5499a04bf3778295(["envRegCont<br>workflow"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>package"]):::queued --> x5499a04bf3778295(["envRegCont<br>workflow"]):::queued
+    x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>workflow"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>workflow"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>workflow"]):::queued
     
   end
-  classDef outdated stroke:#000000,color:#000000,fill:#78B7C5;
-  classDef none stroke:#000000,color:#000000,fill:#94a4ac;
 ```
 
-## Data accumulation
+# Data accumulation
 
 Our accumulation of data is agnostic, taking in many disparate sources.
 For example, information on the distribution of species may be based on:

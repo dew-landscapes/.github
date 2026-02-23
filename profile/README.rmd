@@ -1,11 +1,5 @@
 --- 
 title: "DEW-landscapes"
-author:
-  - name: Nigel Willoughby
-  - name: Joel Allen
-  - name: Simeon Zylinski
-  - name: Andrew West
-institution: Department of Environment and Water
 date: "`r format(Sys.time(), '%A, %d %B, %Y. %H:%M')`"
 link-citations: yes
 bibliography:
@@ -16,7 +10,7 @@ description: Background to DEW-landscapes packages and workflows
 output: github_document
 ---
 
-```{r setup, echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, tidy = TRUE}
+```{r setup, echo = FALSE, warning = FALSE, error = FALSE, message = FALSE, tidy = TRUE, include = FALSE}
 
 knitr::opts_chunk$set(echo = FALSE
                       , warning = FALSE
@@ -35,19 +29,15 @@ knitr::write_bib(file = here::here("profile/packages.bib"))
 
 ```
 
-This readme is a work in progress. Last update: `r format(fs::file_info("README.rmd")$modification_time, '%A, %d %B, %Y. %H:%M')`
-
-# DEW-landscapes
-
 DEW-landscapes holds packages and workflows (projects) we have found useful for creating, cleaning and analysing large, unstructured biological and environmental data sets in the context of providing lines of evidence for decision making in natural resources management.
 
 Primarily, this readme aims to document the various `env` packages and workflows (projects), when you might want to use them, and how they hang together.
 
-## Background
+# Background
 
 DEW-landscapes projects and packages have been roughly guided by the paper _Essential biodiversity variables for mapping and monitoring species populations_ [@RN4609] in that once data are accumulated, they are cleaned with reference to a regular cube of specific extent (generally with reference to temporal and geographic extent) and grain (generally with reference to temporal, geographic and taxonomic grain). Apparently, this aligns with the Earth Systems Data Cubes (ESDCs) concept [e.g. @RN4610]. The R package `sits` `r envReport::cite_package("sits", bib_file = here::here("profile", "packages.bib"))`, while not used directly in any `env` packages or workflows, also provides useful background on [regular cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes) within the context of earth observation (EO) cubes.
 
-### Workflows
+## Workflows
 
 The following figure shows a cartoon of the various workflows and the context in which they might be used.
 
@@ -55,7 +45,10 @@ The following figure shows a cartoon of the various workflows and the context in
 
 env_packages <- c("envImport", "envClean", "envRange", "envSDM")
 
-mer <- targets::tar_mermaid()
+mer <- targets::tar_mermaid(label = "description"
+                            , outdated = FALSE
+                            , color = FALSE
+                            )
 
 cat(c("```mermaid", mer, "```"), sep = "\n") 
 
@@ -64,7 +57,7 @@ if(FALSE) targets::tar_visnetwork()
 ```
 
 
-## Data accumulation
+# Data accumulation
 
 Our accumulation of data is agnostic, taking in many disparate sources. For example, information on the distribution of species may be based on:
 
