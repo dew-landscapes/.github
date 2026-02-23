@@ -1,19 +1,27 @@
 DEW-landscapes
 ================
-Tuesday, 24 February, 2026. 07:52
+
+This is a work in progress. Last update Tuesday, 24 February, 2026.
+08:26.
 
 DEW-landscapes holds packages and workflows (projects) we have found
 useful for creating, cleaning and analysing large, unstructured
 biological and environmental data sets in the context of providing lines
 of evidence for decision making in natural resources management.
 
-Primarily, this readme aims to document the various `env` packages and
-workflows (projects), when you might want to use them, and how they hang
-together.
+This readme aims to:
+
+- document the various `env` packages and workflows
+- specify the aims of each package and workflow
+- point to useful supporting workflows
+
+Note that most workflows are private github repositories. Links are
+provided to reports resulting from use of the workflows, where
+available.
 
 # Background
 
-DEW-landscapes projects and packages have been roughly guided by the
+DEW-landscapes packages and workflows have been roughly guided by the
 paper *Essential biodiversity variables for mapping and monitoring
 species populations* ([Jetz et al. 2019](#ref-RN4609)) in that once data
 are accumulated, they are cleaned with reference to a regular cube of
@@ -27,10 +35,10 @@ workflows, also provides useful background on [regular
 cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes)
 within the context of earth observation (EO) cubes.
 
-## Workflows
+# Workflows
 
-The following figure shows a cartoon of the various workflows and the
-context in which they might be used.
+The following figure shows a cartoon of the links between various `env`
+packages and workflows.
 
 ``` mermaid
 graph LR
@@ -58,24 +66,14 @@ graph LR
   end
 ```
 
-# Data accumulation
+# envImport and envOcc
 
-Our accumulation of data is agnostic, taking in many disparate sources.
-For example, information on the distribution of species may be based on:
+The workflow [`envOcc`](https://github.com/dew-landscapes/envOcc) helps
+aggregate many disparate data sources. Functions for accessing publicly
+accessible data sources are available within
+[`envImport`](https://github.com/dew-landscapes/envImport).
 
-- relatively high quality government data sets of species records, for
-  example:
-  - [Biological Databases of South
-    Australia](https://www.environment.sa.gov.au/topics/science/information-and-data/biological-databases-of-south-australia)
-- online biological data aggregators, for example:
-  - [Atlas of Living Australia](https://www.ala.org.au/)
-- polygon (sometimes modelled) data, for example:
-  - [Species of National Environmental Significance distribution
-    dataset](https://fed.dcceew.gov.au/datasets/9d313bb078b9421ebebc835b3a69c470/about)
-  - [IUCN Red
-    List](https://www.iucnredlist.org/resources/spatial-data-download)
-  - [BirdLife
-    International](https://datazone.birdlife.org/species/requestdis)
+# envClean and envCleaned
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">

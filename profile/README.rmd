@@ -1,6 +1,5 @@
 --- 
 title: "DEW-landscapes"
-date: "`r format(Sys.time(), '%A, %d %B, %Y. %H:%M')`"
 link-citations: yes
 bibliography:
 -  "`r fs::path('/projects', 'data', 'bib', 'refs.bib')`"
@@ -29,17 +28,25 @@ knitr::write_bib(file = here::here("profile/packages.bib"))
 
 ```
 
+This is a work in progress. Last update `r format(Sys.time(), '%A, %d %B, %Y. %H:%M')`.
+
 DEW-landscapes holds packages and workflows (projects) we have found useful for creating, cleaning and analysing large, unstructured biological and environmental data sets in the context of providing lines of evidence for decision making in natural resources management.
 
-Primarily, this readme aims to document the various `env` packages and workflows (projects), when you might want to use them, and how they hang together.
+This readme aims to:
+
+* document the various `env` packages and workflows
+* specify the aims of each package and workflow
+* point to useful supporting workflows
+
+Note that most workflows are private github repositories. Links are provided to reports resulting from use of the workflows, where available.
 
 # Background
 
-DEW-landscapes projects and packages have been roughly guided by the paper _Essential biodiversity variables for mapping and monitoring species populations_ [@RN4609] in that once data are accumulated, they are cleaned with reference to a regular cube of specific extent (generally with reference to temporal and geographic extent) and grain (generally with reference to temporal, geographic and taxonomic grain). Apparently, this aligns with the Earth Systems Data Cubes (ESDCs) concept [e.g. @RN4610]. The R package `sits` `r envReport::cite_package("sits", bib_file = here::here("profile", "packages.bib"))`, while not used directly in any `env` packages or workflows, also provides useful background on [regular cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes) within the context of earth observation (EO) cubes.
+DEW-landscapes packages and workflows have been roughly guided by the paper _Essential biodiversity variables for mapping and monitoring species populations_ [@RN4609] in that once data are accumulated, they are cleaned with reference to a regular cube of specific extent (generally with reference to temporal and geographic extent) and grain (generally with reference to temporal, geographic and taxonomic grain). Apparently, this aligns with the Earth Systems Data Cubes (ESDCs) concept [e.g. @RN4610]. The R package `sits` `r envReport::cite_package("sits", bib_file = here::here("profile", "packages.bib"))`, while not used directly in any `env` packages or workflows, also provides useful background on [regular cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes) within the context of earth observation (EO) cubes.
 
-## Workflows
+# Workflows
 
-The following figure shows a cartoon of the various workflows and the context in which they might be used.
+The following figure shows a cartoon of the links between various `env` packages and workflows.
 
 ```{r, results = "asis", echo = FALSE}
 
@@ -57,18 +64,12 @@ if(FALSE) targets::tar_visnetwork()
 ```
 
 
-# Data accumulation
+# envImport and envOcc
 
-Our accumulation of data is agnostic, taking in many disparate sources. For example, information on the distribution of species may be based on:
+The workflow [`envOcc`](https://github.com/dew-landscapes/envOcc) helps aggregate many disparate data sources. Functions for accessing publicly accessible data sources are available within [`envImport`](https://github.com/dew-landscapes/envImport).
 
-* relatively high quality government data sets of species records, for example:
-    + [Biological Databases of South Australia](https://www.environment.sa.gov.au/topics/science/information-and-data/biological-databases-of-south-australia)
-* online biological data aggregators, for example:
-    + [Atlas of Living Australia](https://www.ala.org.au/)
-* polygon (sometimes modelled) data, for example:
-    + [Species of National Environmental Significance distribution dataset](https://fed.dcceew.gov.au/datasets/9d313bb078b9421ebebc835b3a69c470/about)
-    + [IUCN Red List](https://www.iucnredlist.org/resources/spatial-data-download)
-    + [BirdLife International](https://datazone.birdlife.org/species/requestdis)
+# envClean and envCleaned
+
 
 
 
