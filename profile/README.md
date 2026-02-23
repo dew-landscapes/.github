@@ -2,26 +2,25 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-08:40.
+08:59.
 
-DEW-landscapes holds packages and workflows (projects) we have found
-useful for creating, cleaning and analysing large, unstructured
-biological and environmental data sets in the context of providing lines
-of evidence for decision making in natural resources management.
+DEW-landscapes holds packages and projects we have found useful for
+creating, cleaning and analysing large, unstructured biological and
+environmental data sets in the context of providing lines of evidence
+for decision making in natural resources management.
 
 This readme aims to:
 
-- document the various `env` packages and workflows
-- specify the aims of each package and workflow
-- point to useful supporting workflows
+- document the various `env` packages and projects
+- specify the aims of each package and project
+- point to useful supporting projects
 
-Note that most workflows are private github repositories. Links are
-provided to reports resulting from use of the workflows, where
-available.
+Note that most projects are private github repositories. Links are
+provided to reports resulting from use of the projects, where available.
 
 # Background
 
-DEW-landscapes packages and workflows have been roughly guided by the
+DEW-landscapes packages and projects have been roughly guided by the
 paper *Essential biodiversity variables for mapping and monitoring
 species populations* ([Jetz et al. 2019](#ref-RN4609)) in that once data
 are accumulated, they are cleaned with reference to a regular cube of
@@ -31,14 +30,14 @@ taxonomic grain). Apparently, this aligns with the Earth Systems Data
 Cubes (ESDCs) concept (e.g. [Montero et al. 2024](#ref-RN4610)). The R
 package `sits` ([Simoes et al. 2026](#ref-R-sits),
 [2021](#ref-sits2021)), while not used directly in any `env` packages or
-workflows, also provides useful background on [regular
+projects, also provides useful background on [regular
 cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes)
 within the context of earth observation (EO) cubes.
 
-# Workflows
+# Overview
 
 The following figure shows a cartoon of the links between various `env`
-packages and workflows.
+packages and projects.
 
 ``` mermaid
 graph LR
@@ -69,12 +68,28 @@ graph LR
 
 # envImport and envOcc
 
-The workflow [`envOcc`](https://github.com/dew-landscapes/envOcc) helps
+The project [`envOcc`](https://github.com/dew-landscapes/envOcc) helps
 aggregate many disparate data sources. Functions for accessing publicly
 accessible data sources are available within
 [`envImport`](https://github.com/dew-landscapes/envImport).
 
 # envClean and envCleaned
+
+# Supporting packages
+
+## envFunc
+
+Generic tools useful across `envBlah` packages.
+
+## envTargets
+
+The goal of envTargets is to help automate the creation, execuation, and
+maintenance of targets workflows in other ‘env’ projects.
+
+Specifically, in conjunction with supporting files `scales.yaml` and
+`_targets.yaml`, `envTargets` provides support for generating machine-
+and human-readable directory structures explicitly referencing the
+extent and grain
 
 # References
 
