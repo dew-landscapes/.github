@@ -27,10 +27,6 @@ list(
                , 1
                , description = "package"
                )
-  , tar_target(envRange
-               , 1
-               , description = "package"
-               )
   , tar_target(envDistribution
                , 1
                , description = "package"
@@ -44,6 +40,10 @@ list(
                , 1
                , description = "project"
                )
+  , tar_target(envRange
+               , 1
+               , description = "project"
+               )
   , tar_target(envCleaned
                , envOcc + envClean + envRange + envRas + envDistribution
                , description = "project"
@@ -53,11 +53,11 @@ list(
                , description = "project"
                )
   , tar_target(envSDMs
-               , envCleaned + envSDM + envRas
+               , envCleaned + envSDM + envRas + envRange
                , description = "project"
                )
   , tar_target(envPIA
-               , envSDMs + envRegCont
+               , envCleaned + envSDMs + envRegCont
                , description = "project"
                )
   )
