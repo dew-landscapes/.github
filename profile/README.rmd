@@ -73,7 +73,7 @@ A package with description: `r utils::packageDescription("envImport")$Descriptio
 
 ## [`envOcc`](https://github.com/dew-landscapes/envOcc)
 
-The project [`envOcc`](https://github.com/dew-landscapes/envOcc) aggregates many disparate data sources.
+The project `envOcc` aggregates many disparate data sources.
 
 ## [`envRas`](https://github.com/dew-landscapes/envRas)
 
@@ -101,6 +101,9 @@ Some example generic cleaning steps include:
 
 Some `envCleaned` functions will be applied only in downstream projects as they are only useful with respect to a projects aims. For example, records taken of only a single taxa within a location (say, as part of tree health monitoring) provide useful data for a species distribution model but do not provide useful data for community analyses. Thus the function [`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html) that allows detecting excessively over- or under-sampled visits for possible filtering is unlikely to be useful in preparing species distribution models but is essential when undertaking community analyses.
 
+## [`envStatus`](https://github.com/dew-landscapes/envStatus)
+
+Generates taxonomically aligned (to a taxonomy object resulting from `envCleaned`) information on taxa listed under various legislation.
 
 # Supporting packages
 

@@ -48,6 +48,10 @@ list(
                , envOcc + envClean + envRange + envRas + envDistribution
                , description = "project"
                )
+  , tar_target(envStatus
+               , envCleaned
+               , description = "project"
+               )
   , tar_target(envRegCont
                , envCleaned + envRange
                , description = "project"
@@ -57,7 +61,7 @@ list(
                , description = "project"
                )
   , tar_target(envPIA
-               , envCleaned + envSDMs + envRegCont
+               , envCleaned + envSDMs + envRegCont + envStatus
                , description = "project"
                )
   )

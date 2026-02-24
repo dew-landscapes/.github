@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-15:37.
+15:45.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -53,20 +53,22 @@ graph LR
   subgraph Graph
     direction LR
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
-    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
+    xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
+    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued
     x6832f874a98057bb(["envFunc<br>package"]):::queued
     xb03046fba8fa1b84(["envTargets<br>package"]):::queued
   end
@@ -82,8 +84,7 @@ combining data sources.
 
 ## [`envOcc`](https://github.com/dew-landscapes/envOcc)
 
-The project [`envOcc`](https://github.com/dew-landscapes/envOcc)
-aggregates many disparate data sources.
+The project `envOcc` aggregates many disparate data sources.
 
 ## [`envRas`](https://github.com/dew-landscapes/envRas)
 
@@ -131,6 +132,11 @@ that allows detecting excessively over- or under-sampled visits for
 possible filtering is unlikely to be useful in preparing species
 distribution models but is essential when undertaking community
 analyses.
+
+## [`envStatus`](https://github.com/dew-landscapes/envStatus)
+
+Generates taxonomically aligned (to a taxonomy object resulting from
+`envCleaned`) information on taxa listed under various legislation.
 
 # Supporting packages
 
