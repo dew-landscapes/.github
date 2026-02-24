@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-16:46.
+17:15.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -48,21 +48,25 @@ graph LR
   subgraph Links between env packages and projects
     direction LR
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
+    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
+    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
+    x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
-    xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
-    xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
+    xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
+    xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
-    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued
     x6832f874a98057bb(["envFunc<br>package"]):::queued
     xb03046fba8fa1b84(["envTargets<br>package"]):::queued
@@ -160,13 +164,15 @@ following process:
 1)  Generate an initial inclusive list of binomials for any aoi
     (aoi-taxa), made up of any taxa with:
     1)  records within the aoi, including a buffer
-    2)  a minimum convex polygon (mcp) around all suitable records of a
-        taxa that intersect the aoi, including a buffer
-    3)  an existing *Environment Protection and Biodiversity
-        Conservation Act 1999 (EPBC Act)* distribution that overlaps the
-        study area, not including a buffer
-    4)  an existing expert distribution generated for some fauna (about
-        70 fauna taxa)
+    2)  one of the following overlaps the study area
+        1)  an existing *Environment Protection and Biodiversity
+            Conservation Act 1999 (EPBC Act)* distribution that overlaps
+            the study area, not including a buffer, or, if not available
+        2)  an existing expert distribution generated for some fauna
+            (about 70 fauna taxa), including a buffer, or, if not
+            available
+        3)  a minimum convex polygon (mcp) around all suitable records
+            of a taxa, including a buffer
 2)  Identify taxa of concern (aoi-concern), made up of any aoi-taxa:
     1)  listed as threatened by the *EPBC Act*
     2)  listed on schedules 7 (Endangered), 8 (Vulnerable) or 9 (Rare)
@@ -174,7 +180,8 @@ following process:
     3)  likely to be listed in the future under the *EPBC Act* or *NPW
         Act*
     4)  with a significant proportion of their Australian distribution
-        in the aoi (see [`envRegCont`]())
+        in the aoi (see
+        [`envRegCont`](https://github.com/dew-landscapes/envRegCont/))
 3)  Provide a fine-scale representation of where, within the aoi,
     aoi-concern taxa are likely to occur based on (in order):
     1)  fine-scale distribution model for each taxa (species
@@ -193,6 +200,9 @@ following process:
         aoi
 
 ## [`envEco`](https://github.com/dew-landscapes/envEco)
+
+For any area of interest (aoi) generate maps and descriptions of
+ecosystems.
 
 # Supporting packages
 

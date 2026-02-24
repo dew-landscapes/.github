@@ -31,7 +31,20 @@ list(
                , 1
                , description = "package"
                )
+  , tar_target(envCluster
+               , 1
+               , description = "package"
+               )
+  , tar_target(envModel
+               , 1
+               , description = "package"
+               )
+  , tar_target(envEcosystems
+               , 1
+               , description = "package"
+               )
   # projects------
+  ## assemble --------
   , tar_target(envOcc
                , envImport
                , description = "project"
@@ -44,6 +57,7 @@ list(
                , 1
                , description = "project"
                )
+  ## clean --------
   , tar_target(envCleaned
                , envOcc + envClean + envRange + envRas + envDistribution
                , description = "project"
@@ -56,6 +70,7 @@ list(
                , envCleaned + envRange
                , description = "project"
                )
+  ## main projects --------
   , tar_target(envSDMs
                , envCleaned + envSDM + envRas + envRange
                , description = "project"
@@ -63,5 +78,8 @@ list(
   , tar_target(envPIA
                , envCleaned + envSDMs + envRegCont + envStatus
                , description = "project"
+               )
+  , tar_target(envEco
+               , envCleaned + envCluster + envModel + envEcosystems
                )
   )
