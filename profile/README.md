@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-16:40.
+16:46.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -93,11 +93,6 @@ combination with the biological data assembled via `envOcc`.
 A package with description: Tools to facilitate cleaning tasks
 associated with records of taxa
 
-## [`envDistribution`](https://github.com/dew-landscapes/envDistribution)
-
-A package with description: Functions for sourcing, creating and working
-with species distributions (geographic ranges).
-
 `envClean` functions are most obviously applied in the `envCleaned`
 workflow. However, many `envClean` functions will be applied only in
 downstream projects as they are only useful with respect to a specific
@@ -110,6 +105,11 @@ community analyses. Thus the function
 possible filtering – is unlikely to be useful in preparing species
 distribution models but is essential when undertaking community
 analyses.
+
+## [`envDistribution`](https://github.com/dew-landscapes/envDistribution)
+
+A package with description: Functions for sourcing, creating and working
+with species distributions (geographic ranges).
 
 ## [`envCleaned`](https://github.com/dew-landscapes/envCleaned)
 
