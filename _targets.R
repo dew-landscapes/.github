@@ -80,6 +80,6 @@ list(
                , description = "project"
                )
   , tar_target(envEco
-               , envCleaned + envCluster + envModel + envEcosystems
+               , envCleaned + envCluster + envModel + envEcosystems + envRas
                )
   )
