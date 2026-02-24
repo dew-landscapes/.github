@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-17:17.
+17:21.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -52,11 +52,11 @@ graph LR
     xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
-    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
-    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
-    x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued

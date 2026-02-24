@@ -81,5 +81,6 @@ list(
                )
   , tar_target(envEco
                , envCleaned + envCluster + envModel + envEcosystems + envRas
+               , description = "project"
                )
   )
