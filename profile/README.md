@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-15:45.
+16:02.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -44,6 +44,7 @@ packages and projects.
 
 ``` mermaid
 graph LR
+--- title: env Packages and Projects ---
   style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
@@ -103,6 +104,19 @@ associated with records of taxa
 A package with description: Functions for sourcing, creating and working
 with species distributions (geographic ranges).
 
+`envClean` functions are most obviously applied in the `envCleaned`
+workflow. However, many `envClean` functions will be applied only in
+downstream projects as they are only useful with respect to a specific
+projects aims. For example, records taken of only a single taxa within a
+location (say, as part of tree health monitoring) provide useful data
+for a species distribution model but do not provide useful data for
+community analyses. Thus the function
+[`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html)
+– that allows detecting excessively over- or under-sampled visits for
+possible filtering – is unlikely to be useful in preparing species
+distribution models but is essential when undertaking community
+analyses.
+
 ## [`envCleaned`](https://github.com/dew-landscapes/envCleaned)
 
 The project `envCleaned` takes the data assembled by `envOcc` and
@@ -118,20 +132,8 @@ Some example generic cleaning steps include:
   Can be called directly on a dataframe to filter records to those
   occurring within a polygon (or its bounding box).
 - [`envDistribution::filter_by_distribution()`](https://dew-landscapes.github.io/envDistribution/reference/filter_by_distribution.html).
-  Can be used to flag or filter records outside of its range, as
-  specified by a polygon.
-
-Some `envCleaned` functions will be applied only in downstream projects
-as they are only useful with respect to a projects aims. For example,
-records taken of only a single taxa within a location (say, as part of
-tree health monitoring) provide useful data for a species distribution
-model but do not provide useful data for community analyses. Thus the
-function
-[`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html)
-that allows detecting excessively over- or under-sampled visits for
-possible filtering is unlikely to be useful in preparing species
-distribution models but is essential when undertaking community
-analyses.
+  Can be used to flag or filter records of a taxa outside of its range,
+  as specified by a polygon.
 
 ## [`envStatus`](https://github.com/dew-landscapes/envStatus)
 

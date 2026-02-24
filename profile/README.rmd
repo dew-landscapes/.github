@@ -52,12 +52,13 @@ The following figure shows a cartoon of the links between various `env` packages
 
 ```{r, results = "asis", echo = FALSE}
 
-env_packages <- c("envImport", "envClean", "envRange", "envSDM")
-
 mer <- targets::tar_mermaid(label = "description"
                             , outdated = FALSE
                             , color = FALSE
                             )
+
+# Insert title directly into the character vector
+mer[1] <- paste0(mer[1], "\n", "--- title: env Packages and Projects ---")
 
 cat(c("```mermaid", mer, "```"), sep = "\n") 
 
@@ -89,6 +90,8 @@ A package with description: `r utils::packageDescription("envClean")$Description
 
 A package with description: `r utils::packageDescription("envDistribution")$Description`
 
+`envClean` functions are most obviously applied in the `envCleaned` workflow. However, many `envClean` functions will be applied only in downstream projects as they are only useful with respect to a specific projects aims. For example, records taken of only a single taxa within a location (say, as part of tree health monitoring) provide useful data for a species distribution model but do not provide useful data for community analyses. Thus the function [`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html) &ndash; that allows detecting excessively over- or under-sampled visits for possible filtering &ndash; is unlikely to be useful in preparing species distribution models but is essential when undertaking community analyses.
+
 ## [`envCleaned`](https://github.com/dew-landscapes/envCleaned)
 
 The project `envCleaned` takes the data assembled by `envOcc` and applies generic cleaning steps that will be relevant to any downstream use.
@@ -97,9 +100,7 @@ Some example generic cleaning steps include:
 
 * [`envClean::make_taxonomy()`](https://dew-landscapes.github.io/envClean/reference/make_taxonomy.html). Query online databases to retrieve a good guess (at best!) for standardised taxonomy for use across all the assembled data sources.
 * [`envClean::filter_geo_range()`](https://dew-landscapes.github.io/envClean/reference/filter_geo_range.html). Can be called directly on a dataframe to filter records to those occurring within a polygon (or its bounding box).
-* [`envDistribution::filter_by_distribution()`](https://dew-landscapes.github.io/envDistribution/reference/filter_by_distribution.html). Can be used to flag or filter records outside of its range, as specified by a polygon.
-
-Some `envCleaned` functions will be applied only in downstream projects as they are only useful with respect to a projects aims. For example, records taken of only a single taxa within a location (say, as part of tree health monitoring) provide useful data for a species distribution model but do not provide useful data for community analyses. Thus the function [`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html) that allows detecting excessively over- or under-sampled visits for possible filtering is unlikely to be useful in preparing species distribution models but is essential when undertaking community analyses.
+* [`envDistribution::filter_by_distribution()`](https://dew-landscapes.github.io/envDistribution/reference/filter_by_distribution.html). Can be used to flag or filter records of a taxa outside of its range, as specified by a polygon.
 
 ## [`envStatus`](https://github.com/dew-landscapes/envStatus)
 
