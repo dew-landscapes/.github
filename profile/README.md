@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-16:02.
+16:09.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -44,7 +44,6 @@ packages and projects.
 
 ``` mermaid
 graph LR
---- title: env Packages and Projects ---
   style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
