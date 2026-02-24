@@ -31,29 +31,33 @@ list(
                , 1
                , description = "package"
                )
-  # Workflows------
+  , tar_target(envDistribution
+               , 1
+               , description = "package"
+               )
+  # projects------
   , tar_target(envOcc
                , envImport
-               , description = "workflow"
+               , description = "project"
                )
   , tar_target(envRas
                , 1
-               , description = "workflow"
+               , description = "project"
                )
   , tar_target(envCleaned
-               , envOcc + envClean + envRange + envRas
-               , description = "workflow"
+               , envOcc + envClean + envRange + envRas + envDistribution
+               , description = "project"
                )
   , tar_target(envRegCont
                , envCleaned + envRange
-               , description = "workflow"
+               , description = "project"
                )
   , tar_target(envSDMs
                , envCleaned + envSDM + envRas
-               , description = "workflow"
+               , description = "project"
                )
   , tar_target(envPIA
                , envSDMs + envRegCont
-               , description = "workflow"
+               , description = "project"
                )
   )

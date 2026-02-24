@@ -38,11 +38,13 @@ This readme aims to:
 * specify the aims of each package and project
 * point to useful supporting projects
 
+Package specific information is limited here - refer to the package repo for further description.
+
 Note that most projects are private github repositories. Links are provided to reports resulting from use of the projects, where available.
 
 # Background
 
-DEW-landscapes packages and projects have been roughly guided by the paper _Essential biodiversity variables for mapping and monitoring species populations_ [@RN4609] in that once data are accumulated, they are cleaned with reference to a regular cube of specific extent (generally with reference to temporal and geographic extent) and grain (generally with reference to temporal, geographic and taxonomic grain). Apparently, this aligns with the Earth Systems Data Cubes (ESDCs) concept [e.g. @RN4610]. The R package `sits` `r envReport::cite_package("sits", bib_file = here::here("profile", "packages.bib"))`, while not used directly in any `env` packages or projects, also provides useful background on [regular cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes) within the context of earth observation (EO) cubes.
+DEW-landscapes packages and projects have been roughly guided by the paper _Essential biodiversity variables for mapping and monitoring species populations_ [@RN4609] in that once data are accumulated, they are cleaned with reference to a regular cube of specific extent (generally with reference to temporal and geographic extent) and grain (generally with reference to temporal, geographic and taxonomic grain). Apparently, this aligns with the Earth Systems Data Cubes (ESDCs) concept [e.g. @RN4610]. The R package `sits` `r envReport::cite_package("sits", bib_file = here::here("profile", "packages.bib"))`, while not used in any `env` packages or projects, also provides useful background on [regular cubes](https://e-sensing.github.io/sitsbook/dc_regularize.html#the-need-for-regular-eo-data-cubes) within the context of earth observation (EO) cubes.
 
 # Overview
 
@@ -63,12 +65,41 @@ if(FALSE) targets::tar_visnetwork()
 
 ```
 
+# Assemling data
 
-# envImport and envOcc
+## [`envImport`](https://github.com/dew-landscapes/envImport)
 
-The project [`envOcc`](https://github.com/dew-landscapes/envOcc) helps aggregate many disparate data sources. Functions for accessing publicly accessible data sources are available within [`envImport`](https://github.com/dew-landscapes/envImport).
+A package with description: `r utils::packageDescription("envImport")$Description`
 
-# envClean and envCleaned
+## [`envOcc`](https://github.com/dew-landscapes/envOcc)
+
+The project [`envOcc`](https://github.com/dew-landscapes/envOcc) aggregates many disparate data sources.
+
+## [`envRas`](https://github.com/dew-landscapes/envRas)
+
+This project generates environmental data as rasters, for use in combination with the biological data assembled via `envOcc`.
+
+# Cleaning data
+
+## [`envClean`](https://github.com/dew-landscapes/envClean)
+
+A package with description: `r utils::packageDescription("envClean")$Description`
+
+## [`envDistribution`](https://github.com/dew-landscapes/envDistribution)
+
+A package with description: `r utils::packageDescription("envDistribution")$Description`
+
+## [`envCleaned`](https://github.com/dew-landscapes/envCleaned)
+
+The project `envCleaned` takes the data assembled by `envOcc` and applies generic cleaning steps that will be relevant to any downstream use.
+
+Some example generic cleaning steps include:
+
+* [`envClean::make_taxonomy()`](https://dew-landscapes.github.io/envClean/reference/make_taxonomy.html). Query online databases to retrieve a good guess (at best!) for standardised taxonomy for use across all the assembled data sources.
+* [`envClean::filter_geo_range()`](https://dew-landscapes.github.io/envClean/reference/filter_geo_range.html). Can be called directly on a dataframe to filter records to those occurring within a polygon (or its bounding box).
+* [`envDistribution::filter_by_distribution()`](https://dew-landscapes.github.io/envDistribution/reference/filter_by_distribution.html). Can be used to flag or filter records outside of its range, as specified by a polygon.
+
+Some `envCleaned` functions will be applied only in downstream projects as they are only useful with respect to a projects aims. For example, records taken of only a single taxa within a location (say, as part of tree health monitoring) provide useful data for a species distribution model but do not provide useful data for community analyses. Thus the function [`envClean::make_effort_mod()`](https://dew-landscapes.github.io/envClean/reference/make_effort_mod.html) that allows detecting excessively over- or under-sampled visits for possible filtering is unlikely to be useful in preparing species distribution models but is essential when undertaking community analyses.
 
 
 # Supporting packages
@@ -81,9 +112,14 @@ The project [`envOcc`](https://github.com/dew-landscapes/envOcc) helps aggregate
 
 `r utils::packageDescription("envTargets")$Description`
 
-Specifically, in conjunction with supporting files `scales.yaml` and `_targets.yaml`, `envTargets` provides support for generating machine- and human-readable directory structures explicitly referencing the extent and grain 
+Specifically, in conjunction with supporting files `scales.yaml` and `_targets.yaml`, `envTargets` provides support for generating machine- and human-readable directory structures explicitly referencing the extent and grain
+
+## [`envShiny`](https://github.com/dew-landscapes/envShiny)
+
+`r utils::packageDescription("envShiny")$Description`
+
+Again with explicit support around extent and grain.
 
 
 # References
-
 
