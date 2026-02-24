@@ -50,12 +50,14 @@ DEW-landscapes packages and projects have been roughly guided by the paper _Esse
 
 The following figure shows a cartoon of the links between various `env` packages and projects.
 
-```{r, results = "asis", echo = FALSE, fig.cap = "Links between env packages and projects"}
+```{r, results = "asis", echo = FALSE}
 
 mer <- targets::tar_mermaid(label = "description"
                             , outdated = FALSE
                             , color = FALSE
                             )
+
+mer <- gsub("subgraph Graph", "subgraph Links between env packages and projects", mer)
 
 cat(c("```mermaid", mer, "```"), sep = "\n") 
 
