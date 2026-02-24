@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-16:14.
+16:40.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -69,7 +69,7 @@ graph LR
   end
 ```
 
-# Assemling data
+# Assemling
 
 ## [`envImport`](https://github.com/dew-landscapes/envImport)
 
@@ -86,7 +86,7 @@ The project `envOcc` aggregates many disparate data sources.
 This project generates environmental data as rasters, for use in
 combination with the biological data assembled via `envOcc`.
 
-# Cleaning data
+# Cleaning
 
 ## [`envClean`](https://github.com/dew-landscapes/envClean)
 
@@ -133,6 +133,66 @@ Some example generic cleaning steps include:
 
 Generates taxonomically aligned (to a taxonomy object resulting from
 `envCleaned`) information on taxa listed under various legislation.
+
+# Main outputs
+
+## [`envRegCont`](https://github.com/dew-landscapes/envRegCont)
+
+What contribution does any polygon make to the Australian distribution
+of a taxa? How would key IUCN metrics change if that polygon was removed
+from the distribution?
+
+## [`envSDMs`](https://github.com/dew-landscapes/envSDMs)
+
+Generate many, many species distribution models (SDMs). Generates
+outputs that sit somewhere between dots-on-a-map and broad,
+envelope-type distribution models. In many cases, the models show
+sub-landscape preference. For example, *Sminthopsis psammophila* more
+likely to be found on sand dunes in landscapes of sandy dunes and
+calcareous-loam swales.
+
+## [`envPIA`](https://github.com/dew-landscapes/envPIA)
+
+For any area of interest (aoi) generate maps of areas that are more or
+less likely to trigger various biodiversity legislation via the
+following process:
+
+1)  Generate an initial inclusive list of binomials for any aoi
+    (aoi-taxa), made up of any taxa with:
+    1)  records within the aoi, including a buffer
+    2)  a minimum convex polygon (mcp) around all suitable records of a
+        taxa that intersect the aoi, including a buffer
+    3)  an existing *Environment Protection and Biodiversity
+        Conservation Act 1999 (EPBC Act)* distribution that overlaps the
+        study area, not including a buffer
+    4)  an existing expert distribution generated for some fauna (about
+        70 fauna taxa)
+2)  Identify taxa of concern (aoi-concern), made up of any aoi-taxa:
+    1)  listed as threatened by the *EPBC Act*
+    2)  listed on schedules 7 (Endangered), 8 (Vulnerable) or 9 (Rare)
+        of the *National Parks and Wildlife Act 1972 (NPW Act)*
+    3)  likely to be listed in the future under the *EPBC Act* or *NPW
+        Act*
+    4)  with a significant proportion of their Australian distribution
+        in the aoi (see [`envRegCont`]())
+3)  Provide a fine-scale representation of where, within the aoi,
+    aoi-concern taxa are likely to occur based on (in order):
+    1)  fine-scale distribution model for each taxa (species
+        distribution model - sdm)
+    2)  if no fine_scale distribution model could be developed, then
+        based on EPBC Act distribution
+    3)  if no fine-scale distribution model could be developed, and the
+        taxa had no EPBC Act distribution, then based on association
+        between records and an appropriate environmental layer
+4)  Summarise the fine-scale representations into counts of taxa:
+    1)  listed on the *EPBC Act*
+    2)  listed on schedules 7, 8 or 9 of the *NPW Act*
+    3)  likely to be listed in future
+    4)  that are not listed on any legislation but that have a
+        significant proportion of their Australian distribution in the
+        aoi
+
+## [`envEco`](https://github.com/dew-landscapes/envEco)
 
 # Supporting packages
 
