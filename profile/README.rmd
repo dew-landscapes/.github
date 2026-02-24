@@ -55,6 +55,7 @@ The following figure shows a cartoon of the links between various `env` packages
 mer <- targets::tar_mermaid(label = "description"
                             , outdated = FALSE
                             , color = FALSE
+                            , legend = FALSE
                             )
 
 mer <- gsub("subgraph Graph", "subgraph Links between env packages and projects", mer)

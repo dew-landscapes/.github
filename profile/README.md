@@ -2,7 +2,7 @@ DEW-landscapes
 ================
 
 This is a work in progress. Last update Tuesday, 24 February, 2026.
-16:12.
+16:14.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -44,12 +44,7 @@ packages and projects.
 
 ``` mermaid
 graph LR
-  style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
-  subgraph Legend
-    xa3883d8216f2b511(["Queued"]):::queued
-    xd03d7c7dd2ddda2b(["Regular target"]):::none
-  end
   subgraph Links between env packages and projects
     direction LR
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
