@@ -46,7 +46,7 @@ list(
   # projects------
   ## assemble --------
   , tar_target(envOcc
-               , envImport + envVec
+               , envImport
                , description = "project"
                )
   , tar_target(envBiome
@@ -79,7 +79,7 @@ list(
                )
   ## main projects --------
   , tar_target(envSDMs
-               , envCleaned + envSDM + envRas + envRange
+               , envCleaned + envSDM + envRas + envRange + envPIA_pt1
                , description = "project"
                )
   , tar_target(envPIA_pt1
