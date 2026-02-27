@@ -145,6 +145,18 @@ For any area of interest (aoi) generate maps of areas that are more or less like
 
 For any area of interest (aoi) generate maps and descriptions of ecosystems.
 
+## [`envSens`](https://github.com/dew-landscapes/envSens)
+
+Based on species trait data, estimate sensitivity to stresses.
+
+## `sa_va`
+
+Build trait database for fire-relevant traits for South Australian taxa.
+
+## `fire_sensitivity`
+
+Preferred fire return interval for South Australian ecosystems (based on `envEco`) using trait information from `sa_va`.
+
 # Supporting packages
 
 ## [`envFunc`](https://github.com/dew-landscapes/envFunc)

@@ -1,8 +1,8 @@
 DEW-landscapes
 ================
 
-This is a work in progress. Last update Tuesday, 24 February, 2026.
-17:21.
+This is a work in progress. Last update Friday, 27 February, 2026.
+11:33.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -48,27 +48,30 @@ graph LR
   subgraph Links between env packages and projects
     direction LR
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
     xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued
-    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
-    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x2cb0f2dc918c8a98(["envPIA<br>project"]):::queued --> x2d1dcea9060b62fe(["envSens<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued
+    xc70bb609a37b98f0(["envEco<br>project"]):::queued --> x0f16edc93d113ef9(["fire_sensitivity<br>project"]):::queued
+    xb2a4767da474386b(["sa_va<br>project"]):::queued --> x0f16edc93d113ef9(["fire_sensitivity<br>project"]):::queued
     x6832f874a98057bb(["envFunc<br>package"]):::queued
     xb03046fba8fa1b84(["envTargets<br>package"]):::queued
   end
@@ -204,6 +207,19 @@ following process:
 
 For any area of interest (aoi) generate maps and descriptions of
 ecosystems.
+
+## [`envSens`](https://github.com/dew-landscapes/envSens)
+
+Based on species trait data, estimate sensitivity to stresses.
+
+## `sa_va`
+
+Build trait database for fire-relevant traits for South Australian taxa.
+
+## `fire_sensitivity`
+
+Preferred fire return interval for South Australian ecosystems (based on
+`envEco`) using trait information from `sa_va`.
 
 # Supporting packages
 

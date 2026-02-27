@@ -83,4 +83,16 @@ list(
                , envCleaned + envCluster + envModel + envEcosystems + envRas
                , description = "project"
                )
+  , tar_target(sa_va
+               , 1
+               , description = "project"
+               )
+  , tar_target(fire_sensitivity
+               , envEco + sa_va
+               , description = "project"
+               )
+  , tar_target(envSens
+               , envPIA
+               , description = "project"
+               )
   )
