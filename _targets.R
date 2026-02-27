@@ -46,7 +46,11 @@ list(
   # projects------
   ## assemble --------
   , tar_target(envOcc
-               , envImport
+               , envImport + envVec
+               , description = "project"
+               )
+  , tar_target(envVec
+               , 1
                , description = "project"
                )
   , tar_target(envRas
@@ -54,16 +58,16 @@ list(
                , description = "project"
                )
   , tar_target(envRange
-               , 1
+               , envDistribution + envVec
                , description = "project"
                )
   ## clean --------
   , tar_target(envCleaned
-               , envOcc + envClean + envRange + envRas + envDistribution
+               , envOcc + envClean + envRange + envRas + envDistribution + envVec
                , description = "project"
                )
   , tar_target(envStatus
-               , envCleaned
+               , 1
                , description = "project"
                )
   , tar_target(envRegCont
@@ -72,15 +76,19 @@ list(
                )
   ## main projects --------
   , tar_target(envSDMs
-               , envCleaned + envSDM + envRas + envRange
+               , envCleaned + envSDM + envRas + envRange + envVec
                , description = "project"
                )
-  , tar_target(envPIA
-               , envCleaned + envSDMs + envRegCont + envStatus
+  , tar_target(envPIA_pt1
+               , envCleaned + envRegCont + envStatus + envVec
+               , description = "project"
+               )
+  , tar_target(envPIA_pt2
+               , envPIA_pt1 + envSDMs 
                , description = "project"
                )
   , tar_target(envEco
-               , envCleaned + envCluster + envModel + envEcosystems + envRas
+               , envCleaned + envCluster + envModel + envEcosystems + envRas + envVec
                , description = "project"
                )
   , tar_target(sa_va
@@ -92,7 +100,7 @@ list(
                , description = "project"
                )
   , tar_target(envSens
-               , envPIA
+               , envPIA_pt2
                , description = "project"
                )
   )
