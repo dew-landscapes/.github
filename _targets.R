@@ -8,11 +8,11 @@ list(
   # Support -----
   tar_target(envFunc
              , 1
-             , description = "package"
+             , description = "support package"
              )
   , tar_target(envTargets
                , 1
-               , description = "package"
+               , description = "support package"
                )
   # Packages-----
   , tar_target(envImport
@@ -49,21 +49,24 @@ list(
                , envImport + envVec
                , description = "project"
                )
+  , tar_target(envBiome
+               , 1
+               , description = "project")
   , tar_target(envVec
                , 1
-               , description = "project"
+               , description = "support project"
                )
   , tar_target(envRas
                , 1
                , description = "project"
                )
   , tar_target(envRange
-               , envDistribution + envVec
+               , envDistribution + envBiome
                , description = "project"
                )
   ## clean --------
   , tar_target(envCleaned
-               , envOcc + envClean + envRange + envRas + envDistribution + envVec
+               , envOcc + envClean + envRange + envRas + envDistribution
                , description = "project"
                )
   , tar_target(envStatus
@@ -76,11 +79,11 @@ list(
                )
   ## main projects --------
   , tar_target(envSDMs
-               , envCleaned + envSDM + envRas + envRange + envVec
+               , envCleaned + envSDM + envRas + envRange
                , description = "project"
                )
   , tar_target(envPIA_pt1
-               , envCleaned + envRegCont + envStatus + envVec
+               , envCleaned + envRegCont + envStatus
                , description = "project"
                )
   , tar_target(envPIA_pt2
@@ -88,7 +91,7 @@ list(
                , description = "project"
                )
   , tar_target(envEco
-               , envCleaned + envCluster + envModel + envEcosystems + envRas + envVec
+               , envCleaned + envCluster + envModel + envEcosystems + envRas
                , description = "project"
                )
   , tar_target(sa_va
