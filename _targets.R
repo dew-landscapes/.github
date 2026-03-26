@@ -43,6 +43,10 @@ list(
                , 1
                , description = "package"
                )
+  , tar_target(envRaster
+               , 1
+               , description = "package"
+               )
   # projects------
   ## assemble --------
   , tar_target(envOcc
@@ -57,7 +61,7 @@ list(
                , description = "support project"
                )
   , tar_target(envRas
-               , 1
+               , envRaster
                , description = "project"
                )
   , tar_target(envRange

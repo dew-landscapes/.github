@@ -52,7 +52,8 @@ The following figure shows a cartoon of the links between various `env` packages
 
 ```{r, results = "asis", echo = FALSE}
 
-mer <- targets::tar_mermaid(label = "description"
+mer <- targets::tar_mermaid(script = fs::path(here::here(), "_targets.R")
+                            , label = "description"
                             , outdated = FALSE
                             , color = FALSE
                             , legend = FALSE
@@ -75,6 +76,10 @@ A package with description: `r utils::packageDescription("envImport")$Descriptio
 ## [`envOcc`](https://github.com/dew-landscapes/envOcc)
 
 The project `envOcc` aggregates many disparate data sources.
+
+## [`envRaster`](https://github.com/dew-landscapes/envRaster)
+
+A package with description: `r utils::packageDescription("envRaster")$Description`
 
 ## [`envRas`](https://github.com/dew-landscapes/envRas)
 
