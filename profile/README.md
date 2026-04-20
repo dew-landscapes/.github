@@ -1,7 +1,7 @@
 DEW-landscapes
 ================
 
-This is a work in progress. Last update Monday, 20 April, 2026. 16:19.
+This is a work in progress. Last update Monday, 20 April, 2026. 16:35.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -120,7 +120,8 @@ combination with the biological data assembled via `envOcc`.
 
 ## [`envFire`](https://github.com/dew-landscapes/envFire)
 
-A package with description: What the package does (one paragraph).
+A package with description: Functions to facilitate ecological fire
+analysis
 
 # Cleaning
 
