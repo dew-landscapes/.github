@@ -47,6 +47,10 @@ list(
                , 1
                , description = "package"
                )
+  , tar_target(envFire
+               , 1
+               , description = "package"
+  )
   # projects------
   ## assemble --------
   , tar_target(envOcc
@@ -91,7 +95,7 @@ list(
                , description = "project"
                )
   , tar_target(envPIA_pt2
-               , envPIA_pt1 + envSDMs 
+               , envPIA_pt1 + envSDMs
                , description = "project"
                )
   , tar_target(envEco
@@ -110,4 +114,16 @@ list(
                , envPIA_pt2
                , description = "project"
                )
+  , tar_target(envRegAssess
+               , envRange + envRegCont
+               , description = "project"
+  )
+  , tar_target(envDetection
+               , envCleaned
+               , description = "project"
+  )
+  , tar_target(DFaB
+               , envCleaned + envDetection + envRegCont
+               , description = "project"
+  )
   )

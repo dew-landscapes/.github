@@ -75,7 +75,11 @@ A package with description: `r utils::packageDescription("envImport")$Descriptio
 
 ## [`envOcc`](https://github.com/dew-landscapes/envOcc)
 
-The project `envOcc` aggregates many disparate data sources.
+The project `envOcc` aggregates occurrence data from many disparate data sources.
+
+## [`envVec`](https://github.com/dew-landscapes/envVec)
+
+This project generates spatial vector data (i.e. point, line and polygon layers, as geoparquet files) for use in other env projects.
 
 ## [`envRaster`](https://github.com/dew-landscapes/envRaster)
 
@@ -84,6 +88,10 @@ A package with description: `r utils::packageDescription("envRaster")$Descriptio
 ## [`envRas`](https://github.com/dew-landscapes/envRas)
 
 This project generates environmental data as rasters, for use in combination with the biological data assembled via `envOcc`.
+
+## [`envFire`](https://github.com/dew-landscapes/envFire)
+
+A package with description: `r utils::packageDescription("envFire")$Description`
 
 # Cleaning
 
@@ -109,13 +117,13 @@ Some example generic cleaning steps include:
 
 ## [`envStatus`](https://github.com/dew-landscapes/envStatus)
 
-Generates taxonomically aligned (to a taxonomy object resulting from `envCleaned`) information on taxa listed under various legislation.
+Generates taxonomically aligned (using 'envClean::make_taxonomy') information on taxa listed under various legislation.
 
 # Main outputs
 
 ## [`envRegCont`](https://github.com/dew-landscapes/envRegCont)
 
-What contribution does any polygon make to the Australian distribution of a taxa? How would key IUCN metrics change if that polygon was removed from the distribution?
+What contribution does any region (represented by a polygon) make to the distribution (usually Australian) of a taxa (based on IUCN Red List AOO and EOO metrics)?
 
 ## [`envSDMs`](https://github.com/dew-landscapes/envSDMs)
 
@@ -161,6 +169,18 @@ Build trait database for fire-relevant traits for South Australian taxa.
 ## `fire_sensitivity`
 
 Preferred fire return interval for South Australian ecosystems (based on `envEco`) using trait information from `sa_va`.
+
+## [`envDetection`](https://github.com/dew-landscapes/envDetection)
+
+Generates detection estimates associated with different sampling methods for taxa via occupancy models. Used to determine the relevant sampling methods for each taxa to improve target group sampling, and generation of bias layers and background points in SDMs. 
+
+## [`DFaB`](https://github.com/Calamanthus/DFaB)
+
+Dynamic Fire and Biodiversity tool for managing habitat of fire dependent fauna via burning. 
+
+## `envRegAssess`
+
+IUCN Red List regional assessments for a region based on Criterion B (i.e. regional AOO & EOO estimates and associated threat ratings).  
 
 # Supporting packages
 
