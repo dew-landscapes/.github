@@ -1,7 +1,7 @@
 DEW-landscapes
 ================
 
-This is a work in progress. Last update Thursday, 26 March, 2026. 15:39.
+This is a work in progress. Last update Monday, 20 April, 2026. 16:19.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -46,35 +46,42 @@ graph LR
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Links between env packages and projects
     direction LR
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    x0da89b87fbc34bf3(["envDetection<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x0da89b87fbc34bf3(["envDetection<br>project"]):::queued
+    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
     xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
     xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued
     xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued
     xd8ce469e231f9860(["envBiome<br>project"]):::queued --> x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued
     xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued
     x89ac92b9bcad912d(["envRaster<br>package"]):::queued --> x67b5feaf09e4d0ca(["envRas<br>project"]):::queued
+    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x880df32bd41b0aa9(["envRegAssess<br>project"]):::queued
+    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x880df32bd41b0aa9(["envRegAssess<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
-    xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued --> x2d1dcea9060b62fe(["envSens<br>project"]):::queued
     xb2a4767da474386b(["sa_va<br>project"]):::queued --> x0f16edc93d113ef9(["fire_sensitivity<br>project"]):::queued
     xc70bb609a37b98f0(["envEco<br>project"]):::queued --> x0f16edc93d113ef9(["fire_sensitivity<br>project"]):::queued
+    xb092d78dc6463536(["envFire<br>package"]):::queued
     x6832f874a98057bb(["envFunc<br>support package"]):::queued
     xb03046fba8fa1b84(["envTargets<br>support package"]):::queued
     xa92bc89dfa147112(["envVec<br>support project"]):::queued
@@ -91,7 +98,13 @@ combining data sources.
 
 ## [`envOcc`](https://github.com/dew-landscapes/envOcc)
 
-The project `envOcc` aggregates many disparate data sources.
+The project `envOcc` aggregates occurrence data from many disparate data
+sources.
+
+## [`envVec`](https://github.com/dew-landscapes/envVec)
+
+This project generates spatial vector data (i.e. point, line and polygon
+layers, as geoparquet files) for use in other env projects.
 
 ## [`envRaster`](https://github.com/dew-landscapes/envRaster)
 
@@ -104,6 +117,10 @@ longer aims to help process external data. Possibly see envRas instead.
 
 This project generates environmental data as rasters, for use in
 combination with the biological data assembled via `envOcc`.
+
+## [`envFire`](https://github.com/dew-landscapes/envFire)
+
+A package with description: What the package does (one paragraph).
 
 # Cleaning
 
@@ -150,16 +167,16 @@ Some example generic cleaning steps include:
 
 ## [`envStatus`](https://github.com/dew-landscapes/envStatus)
 
-Generates taxonomically aligned (to a taxonomy object resulting from
-`envCleaned`) information on taxa listed under various legislation.
+Generates taxonomically aligned (using ‘envClean::make_taxonomy’)
+information on taxa listed under various legislation.
 
 # Main outputs
 
 ## [`envRegCont`](https://github.com/dew-landscapes/envRegCont)
 
-What contribution does any polygon make to the Australian distribution
-of a taxa? How would key IUCN metrics change if that polygon was removed
-from the distribution?
+What contribution does any region (represented by a polygon) make to the
+distribution (usually Australian) of a taxa (based on IUCN Red List AOO
+and EOO metrics)?
 
 ## [`envSDMs`](https://github.com/dew-landscapes/envSDMs)
 
@@ -231,6 +248,23 @@ Build trait database for fire-relevant traits for South Australian taxa.
 
 Preferred fire return interval for South Australian ecosystems (based on
 `envEco`) using trait information from `sa_va`.
+
+## [`envDetection`](https://github.com/dew-landscapes/envDetection)
+
+Generates detection estimates associated with different sampling methods
+for taxa via occupancy models. Used to determine the relevant sampling
+methods for each taxa to improve target group sampling, and generation
+of bias layers and background points in SDMs.
+
+## [`DFaB`](https://github.com/Calamanthus/DFaB)
+
+Dynamic Fire and Biodiversity tool for managing habitat of fire
+dependent fauna via burning.
+
+## `envRegAssess`
+
+IUCN Red List regional assessments for a region based on Criterion B
+(i.e. regional AOO & EOO estimates and associated threat ratings).
 
 # Supporting packages
 
