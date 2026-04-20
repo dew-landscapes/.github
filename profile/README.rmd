@@ -20,8 +20,6 @@ knitr::opts_chunk$set(echo = FALSE
 
 packages <- c("sits", "targets")
 
-envFunc::check_packages(packages)
-
 purrr::walk(packages, library, character.only = TRUE)
 
 knitr::write_bib(file = here::here("profile/packages.bib"))
