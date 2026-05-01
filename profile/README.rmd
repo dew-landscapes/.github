@@ -176,9 +176,13 @@ Generates detection estimates associated with different sampling methods for tax
 
 Dynamic Fire and Biodiversity tool for managing habitat of fire dependent fauna via burning. 
 
-## `envRegAssess`
+## [`envRegAssess`](https://github.com/dew-landscapes/envRegAssess)
 
 IUCN Red List regional assessments for a region based on Criterion B (i.e. regional AOO & EOO estimates and associated threat ratings).  
+
+## [`envMonitoring`](https://github.com/dew-landscapes/envMonitoring)
+
+Results and occupancy models for regular monitoring. 
 
 # Supporting packages
 

@@ -82,7 +82,7 @@ list(
                , description = "project"
                )
   , tar_target(envRegCont
-               , envCleaned + envRange
+               , envCleaned + envRange + envStatus
                , description = "project"
                )
   ## main projects --------
@@ -123,7 +123,11 @@ list(
                , description = "project"
   )
   , tar_target(DFaB
-               , envCleaned + envDetection + envRegCont
+               , envCleaned + envDetection + envRegCont + envFire + envRas
+               , description = "project"
+  )
+  , tar_target(envMonitoring
+               , envCleaned
                , description = "project"
   )
   )
