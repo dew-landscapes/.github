@@ -1,7 +1,7 @@
 DEW-landscapes
 ================
 
-This is a work in progress. Last update Monday, 04 May, 2026. 16:03.
+This is a work in progress. Last update Monday, 04 May, 2026. 17:37.
 
 DEW-landscapes holds packages and projects we have found useful for
 creating, cleaning and analysing large, unstructured biological and
@@ -46,44 +46,43 @@ graph LR
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Links between env packages and projects
     direction LR
-    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    xc70bb609a37b98f0(["envEco<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
     xb092d78dc6463536(["envFire<br>package"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
-    x0da89b87fbc34bf3(["envDetection<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
-    xc70bb609a37b98f0(["envEco<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
+    x0da89b87fbc34bf3(["envDetection<br>project"]):::queued --> x0658f5015c0c4be5(["DFaB<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xd8ce469e231f9860(["envBiome<br>project"]):::queued
     xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x0da89b87fbc34bf3(["envDetection<br>project"]):::queued
-    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x3c05f6553dd2ee1d(["envModel<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x3c533c4f6ac5a427(["envEcosystems<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x9eca96d789260dc6(["envCluster<br>package"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
+    x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc70bb609a37b98f0(["envEco<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xae45e25dc1ec55b5(["envMonitoring<br>project"]):::queued
     xa419b1871c902a02(["envImport<br>package"]):::queued --> x9d3addc2d3c28cb0(["envOcc<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
     xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued
-    xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued
     xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued
+    xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued --> xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued
     xd8ce469e231f9860(["envBiome<br>project"]):::queued --> x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued
     xb53407deaf8a50f7(["envDistribution<br>package"]):::queued --> x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued
     x89ac92b9bcad912d(["envRaster<br>package"]):::queued --> x67b5feaf09e4d0ca(["envRas<br>project"]):::queued
     x5499a04bf3778295(["envRegCont<br>project"]):::queued --> x880df32bd41b0aa9(["envRegAssess<br>project"]):::queued
-    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
+    x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued --> x5499a04bf3778295(["envRegCont<br>project"]):::queued
     x4e1f08a5bd05b882(["envCleaned<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x67b5feaf09e4d0ca(["envRas<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
-    xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x07cddf360e9b199e(["envSDM<br>package"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
+    xdfa068c3ebc0366d(["envPIA_pt1<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     x4f41d9ef8b70ed0e(["envRange<br>project"]):::queued --> xc1054dd4c63b18e0(["envSDMs<br>project"]):::queued
     xe5749d29c71b6a92(["envPIA_pt2<br>project"]):::queued --> x2d1dcea9060b62fe(["envSens<br>project"]):::queued
     x199e33ac94c360fd(["envClean<br>package"]):::queued --> xf290cd0a0c6ffe34(["envStatus<br>project"]):::queued

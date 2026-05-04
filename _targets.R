@@ -74,7 +74,7 @@ list(
                )
   ## clean --------
   , tar_target(envCleaned
-               , envOcc + envClean + envRange + envRas + envDistribution
+               , envOcc + envClean + envRas + envDistribution
                , description = "project"
                )
   , tar_target(envStatus
