@@ -123,7 +123,7 @@ list(
                , description = "project"
   )
   , tar_target(DFaB
-               , envCleaned + envDetection + envRegCont + envFire + envRas
+               , envCleaned + envDetection + envRegCont + envFire + envRas + envSDM
                , description = "project"
   )
   , tar_target(envMonitoring
