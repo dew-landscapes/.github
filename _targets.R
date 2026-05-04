@@ -58,7 +58,7 @@ list(
                , description = "project"
                )
   , tar_target(envBiome
-               , 1
+               , envCleaned
                , description = "project")
   , tar_target(envVec
                , 1
@@ -69,7 +69,7 @@ list(
                , description = "project"
                )
   , tar_target(envRange
-               , envDistribution + envBiome
+               , envCleaned + envDistribution + envBiome
                , description = "project"
                )
   ## clean --------
@@ -78,7 +78,7 @@ list(
                , description = "project"
                )
   , tar_target(envStatus
-               , 1
+               , envClean
                , description = "project"
                )
   , tar_target(envRegCont
@@ -115,7 +115,7 @@ list(
                , description = "project"
                )
   , tar_target(envRegAssess
-               , envRange + envRegCont
+               , envRegCont
                , description = "project"
   )
   , tar_target(envDetection
