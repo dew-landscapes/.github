@@ -65,7 +65,7 @@ if(FALSE) targets::tar_visnetwork()
 
 ```
 
-# Assemling
+# Assembling
 
 ## [`envImport`](https://github.com/dew-landscapes/envImport)
 
